@@ -1,0 +1,153 @@
+/* #4b5d67-gray
+#322f3d-black
+#59405c- purpdark
+#87556f - purp */
+
+body {
+  padding-top: 50px;
+  background: #322f3d;
+  color:#EDF5E1;
+  font-family: 'Raleway', sans-serif;
+}
+#clock {
+  stroke:#322f3d;
+  stroke-linecap: round;
+  fill: #4b5d67;
+}
+#face {
+  stroke-width: 3px;
+}
+#ticks {
+  stroke-width: 1.5;
+}
+#hourhand {
+  stroke-width: 5px;
+  fill: #59405c;
+  opacity: 75%;
+ 
+}
+#minutehand {
+  stroke-width: 3px;
+  fill: #59405c;
+  opacity: 75%;
+  
+}
+#numbers {
+  font-family: "Arial" sans-serif;
+  font-size: 7pt;
+  font-weight: bold;
+  text-anchor: middle;
+  stroke: none;
+  fill: #322f3d;
+}
+#secondhand {
+  stroke-width: 2px;
+  fill: #59405c;
+  opacity: 50%;
+  
+}
+#logo {
+  font-size: 7pt;
+  stroke:none;
+  fill:#322f3d;
+  
+  
+}
+#subtext
+{font-size: 5px;
+	stroke:none;
+  fill:#322f3d;}
+
+
+.container-left{
+	float:left;
+	padding:15px;
+	margin:20px;
+}
+.container-right{
+	float:right;
+	padding:15px 25px;
+	margin: 15px;
+}
+#curdate{
+  
+	font-size: 5px;
+	stroke:none;
+  fill:#322f3d;
+
+}
+
+.hidden{
+  display: none;
+}
+
+.not-found-message{
+  font-size: 18px;
+}
+button[type="submit"]
+{background: #59405c;
+  border:1px solid #59405c;}
+
+  button[type="submit"]:hover
+{ background-color:#EDF5E1;
+  color:#59405c;
+border:1px solid #EDF5E1;}
+
+input[type] {
+  background-color: #EDF5E1;}
+#priority
+{background: #EDF5E1;}
+
+
+#clock{
+  margin: 10px auto;
+}
+#task-table a
+{
+border:1px solid #59405c;
+color:#EDF5E1;
+padding:3px;
+
+}
+#task-table a:hover
+{text-decoration:none;
+background-color:#EDF5E1;
+color:#59405c;
+padding:3px;
+border-radius: 4px;
+}
+
+#task-table th
+{
+  background:#87556f;
+}
+#task-table tr
+{
+background: #59405c;
+}
+#clear-tasks
+{
+  background: #59405c;
+border:1px solid #59405c; }
+
+#clear-tasks:hover
+{
+  background-color:#EDF5E1;
+  color:#59405c;
+border:1px solid #EDF5E1; }
+
+
+
+@media(max-width:1200px){
+  .container-left{
+    float: none;
+    padding:15px;
+    margin:20px auto;
+  }
+  .container-right{
+    float: none;
+    padding:15px;
+    margin:20px auto;
+    text-align: center;
+  }
+}

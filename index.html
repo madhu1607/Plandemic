@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Madhuri Rudrabhatla">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plandemic | Day</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body onload="updateTime()">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Plandemic</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="add.html">Add Task</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+<div class="container">
+    <div class="container-left" id="left-container">
+      <h2 class="page-header">Plan Your Day</h2>
+
+      <table id="task-table" class="table table-striped">
+        <tr>
+          <th>Task</th>
+          <th>Priority</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th></th>
+          <tr></tr>
+        </tr>
+      </table>
+      <a href="#" id="clear-tasks" class="btn btn-primary">Clear All Tasks</a>
+
+    </div>
+    <div class="container-right">
+        <svg id="clock" viewBox="0 0 100 100" width="300" height="300">
+        <defs>
+        <!--filter for drop-shadows -->
+          <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="1" result="blur" />
+            <feOffset in="blur" dx="1" dy="1" result="shadow" />
+            <feMerge>
+              <feMergeNode in="SourceGraphic"/><feMergeNode in="shadow"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <circle id="face" cx="50" cy="50" r="45"/> <!-- the clock face -->
+        <g id="ticks">
+        <!-- 12 hour tick marks -->
+          <line x1='50' y1='5.000' x2='50.00' y2='10.00'/>
+          <line x1='72.50' y1='11.03' x2='70.00' y2='15.36'/>
+          <line x1='88.97' y1='27.50' x2='84.64' y2='30.00'/>
+          <line x1='95.00' y1='50.00' x2='90.00' y2='50.00'/>
+          <line x1='88.97' y1='72.50' x2='84.64' y2='70.00'/>
+          <line x1='72.50' y1='88.97' x2='70.00' y2='84.64'/>
+          <line x1='50.00' y1='95.00' x2='50.00' y2='90.00'/>
+          <line x1='27.50' y1='88.97' x2='30.00' y2='84.64'/>
+          <line x1='11.03' y1='72.50' x2='15.36' y2='70.00'/>
+          <line x1='5.000' y1='50.00' x2='10.00' y2='50.00'/>
+          <line x1='11.03' y1='27.50' x2='15.36' y2='30.00'/>
+          <line x1='27.50' y1='11.03' x2='30.00' y2='15.36'/>
+        </g>
+        setTimeout(updateTime, 60000);
+        <g id="numbers">
+        <!-- Number the cardinal directions-->
+          <text x="50" y="18">12</text><text x="85" y="53">3</text>
+          <text x="50" y="88">6</text><text x="15" y="53">9</text>
+        </g>
+
+        <text id="logo" x="27" y="29">Plandemic</text>
+        <text id="subtext" x="22" y="35">By Madhuri Rudrabhatla</text>
+        <text id="curdate" x="33" y="70"></text>
+      <!-- Draw hands pointing straight up. We rotate them in the code. -->
+        <g id="hands" filter="url(#shadow)">
+          <line id="hourhand" x1="50" y1="50" x2="50" y2="24"/>
+          <line id="minutehand" x1="50" y1="50" x2="50" y2="20"/>
+          <line id="secondhand" x1="50" y1="50" x2="50" y2="17"/>
+        </g>
+      </svg>
+    </div>
+    </div>
+
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>
